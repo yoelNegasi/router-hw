@@ -1,27 +1,23 @@
 import Names from "./Names";
-import Age from "./Age";
-import { BrowserRouter as Router, Seitch, Link, Route } from "react-router-dom";
-import House from "./House";
+import Age from "./Another";
+import { BrowserRouter as Router, Switch, Link, Route } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="nav">
         <h1>
-          <Link to="/"> na </Link>
+          <Link to="/"> Table </Link>
         </h1>
         <h1>
-          <Link to="/another"> ag</Link>
-        </h1>
-        <h1>
-          <Link to="/new">ho</Link>
+          <Link to="/another"> Another </Link>
         </h1>
       </div>
-      <switch>
+      <Switch>
         <Route path="/" exact component={Names} />
         <Route path="/another" component={Age} />
-        <Route path="/new" component={House} />
-      </switch>
+      </Switch>
     </Router>
   );
 }

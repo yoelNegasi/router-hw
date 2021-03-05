@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 
-function Age() {
+function Another() {
   return (
     <div>
-      <h1>age</h1>
       <h2>
-        <Link to="/">go to name</Link>
+        <Link to="/">Go to table</Link>
       </h2>
     </div>
   );
 }
 
-export default Age;
+export default Another;
