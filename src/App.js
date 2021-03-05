@@ -1,18 +1,28 @@
-import Objectives from "./Objectives";
-import About from "./About";
-import Skill from "./Skill";
-import Education from "./Education";
-import Contact from "./Contact";
+import Names from "./Names";
+import Age from "./Age";
+import { BrowserRouter as Router, Seitch, Link, Route } from "react-router-dom";
+import House from "./House";
 
 function App() {
   return (
-    <div>
-      <Objectives />
-      <About />
-      <Skill />
-      <Education />
-      <Contact />
-    </div>
+    <Router>
+      <div>
+        <h1>
+          <Link to="/"> na </Link>
+        </h1>
+        <h1>
+          <Link to="/another"> ag</Link>
+        </h1>
+        <h1>
+          <Link to="/new">ho</Link>
+        </h1>
+      </div>
+      <switch>
+        <Route path="/" exact component={Names} />
+        <Route path="/another" component={Age} />
+        <Route path="/new" component={House} />
+      </switch>
+    </Router>
   );
 }
 
